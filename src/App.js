@@ -7,7 +7,6 @@ import Profile from './components/Profile';
 import Layout from './components/Layout';
 import Product from './components/Product';
 import MyCart from './components/MyCart';
-import PaymentSuccess from './components/PaymentSuccess';
 import ContactUs from './components/ContactUs';
 import { useEffect } from 'react';
 import axios from './components/interceptors/axios';
@@ -69,7 +68,6 @@ const App = () => {
             <Route path='contact-us' element={<ContactUs />}></Route>
             <Route path='register' element={<Register />}></Route>
             <Route path='profile' element={<Profile />}></Route>
-            <Route path="paymentsuccess" element={<PaymentSuccess />} />
             <Route path='*' element={<h1>Error 404 page not found</h1>}></Route>
           </Route>
         </Routes>
