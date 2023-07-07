@@ -33,13 +33,13 @@ const VerifyOtp = () => {
             disPatch(loginUser(res.data));
             const id=res.data.id;
             const fetchData = async () => {
-                const res = await axios.post("https://shoppy.shop-api.onrender.com/api/products/getcart", { id });
+                const res = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getcart", { id });
                 const { cartdata, total } = res.data;
                 disPatch(addCart({ cartdata, total }));
             }
             fetchData();
             const fetchOrder = async () => {
-                const resp = await axios.post("https://shoppy.shop-api.onrender.com/api/products/getorder", { id });
+                const resp = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getorder", { id });
                 const { orderdata, paymentStatus, total } = resp.data;
                 disPatch(setOrder({ orderdata, paymentStatus, total }));
             }
