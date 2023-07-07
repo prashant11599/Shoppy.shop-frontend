@@ -8,6 +8,8 @@ import { loginUser } from "../../store/authSlice";
 //         console.log(res.data)
 //     });
 // }
+
+
 const useAxiosPrivateInstance=()=>{
     const disPatch=useDispatch();
     useEffect(()=>{
@@ -20,12 +22,11 @@ const useAxiosPrivateInstance=()=>{
                     // refresh();
                     await axios.post("/refresh",{withCredentials:true}).then((res)=>{
                         disPatch(loginUser(res.data));
-                        console.log(res.data)
+                        // console.log(res.data)
                     });
                     return axiosPrivate(prevRequest);
                 }
                 return Promise.reject(error)
-
             }
         )
         return ()=>{

@@ -26,7 +26,7 @@ const App = () => {
   const [id, setId] = useState("");
   useEffect(() => {
     const refresh = async () => {
-      await axios.post("/refresh", { withCredentials: true }).then((res) => {
+      await axios.post("/refresh",{ withCredentials: true }).then((res) => {
         setId(res.data.id);
         disPatch(loginUser(res.data));
         // console.log(res.data)

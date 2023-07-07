@@ -13,7 +13,7 @@ export default axios.create({
 
 export const axiosPrivate=axios.create({
     baseURL:BASE_URL,
-    headers:{'Content-Tpye':'application/json'},
+    headers:{'Access-Control-Allow-Origin': '*','Access-Control-Allow-Credentials':true ,'Content-Type': 'application/json'},
     withCredentials:true
 })
 export const axiosFetch=axios.create({
