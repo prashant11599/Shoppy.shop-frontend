@@ -1,0 +1,26 @@
+.front-image{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+.front-image .front-pg2{
+    /* border: 2px solid red; */
+    /* flex-basis: 60%; */
+    width:100%;
+    height:748px;
+    box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
+}
+.show-product{
+    margin-top:20px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.show-product h1{
+    font-size: 50px;
+}

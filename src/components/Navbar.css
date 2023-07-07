@@ -1,0 +1,127 @@
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
+    /*box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;*/
+}
+.logo {
+    width: 120px;
+    height:10vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;
+    /* border: 2px solid green; */
+    overflow: hidden;
+}
+/* .home{
+    border: 2px solid blue;
+}
+.products{
+    border: 2px solid red;
+}
+.mycart{
+    border: 2px solid red;
+}
+.about{
+    border: 2px solid red;
+} */
+.nav-links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    /* border: 2px solid red; */
+}
+.nav-links li:hover{
+    text-decoration: underline;
+}
+.nav-links li sup{
+    font-size:25px;
+    font-weight: 500;
+}
+.nav-links li sup:hover{
+    text-decoration-line: none;
+}
+.cart-count{
+    color: #31C48D;
+}
+.icons{
+    /* border: 2px solid red; */
+    margin: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    background: none;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        /* display: flex;
+        position: absolute; */
+        top: 15px;
+        left: 35px;
+        height: 7vh;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        left: 0;
+        top: 10%;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        background-color: white;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        text-align: center;
+    }
+
+    .mobile-menu-icon {
+        position: absolute;
+        display: block;
+        right: 20px;
+    }
+
+}

@@ -1,0 +1,87 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #31C48D;
+    /* background-color: white; */
+    /* border: 5px solid red; */
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    /* border: 5px solid rgb(0, 255, 89); */
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.box2 {
+    /* border: 5px solid rgb(205, 59, 59); */
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box2 h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.box2 ul li {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 {
+    /* border: 5px solid rgb(64, 0, 255); */
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box1 h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+.box1 p{
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.box3 h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.box3 ul li {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links li{
+  color: black;
+}
+.footer-links li:hover{
+    text-decoration: underline;
+}
+
+/* .links{
+    border: 5px solid rgb(11, 11, 216);
+    
+} */
