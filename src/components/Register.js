@@ -25,7 +25,7 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formValues);
+        // console.log(formValues);
         await axios.post('/register', formValues).then((res) => {
             // const { data: { id,  message, status } } = res;
             disPatch(registerUser(res.data));

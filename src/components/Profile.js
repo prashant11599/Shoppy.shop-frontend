@@ -107,8 +107,8 @@ const Profile = () => {
                   <p className='reduced-price'>Reduced Price:{product.reducedPrice}</p>
                   {/* <p className='product-description'>{product.productDescription}</p> */}
                   <div className='status'>
-                    <h1 className='payment-status '>Payment: {paymentStatus}</h1>
-                    <h1 className='order-status '>Order Status:Success</h1>
+                    <p className='payment-status '>Payment: {paymentStatus}</p>
+                    <p className='order-status '>Order Status:Success</p>
                   </div>
                 </div>
               </div>

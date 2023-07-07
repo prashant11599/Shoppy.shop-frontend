@@ -7,7 +7,6 @@ import { addCart } from '../store/cartSlice';
 import { setOrder } from '../store/orderSlice';
 import { setProducts } from '../store/productSlice';
 // import { useSelector } from 'react-redux'
-import { axiosFetch } from './interceptors/axios';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -20,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const limit = 15;
-      const res = await axiosFetch("https://shoppy-shop-api.onrender.com/api/products/all", {
+      const res = await axios.get("https://shoppy-shop-api.onrender.com/api/products/all", {
         params: {
           page: 1,
           limit: limit
