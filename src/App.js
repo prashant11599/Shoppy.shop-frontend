@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { APP_DOMAIN } from './components/interceptors/axios';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import Register from './components/Register';
@@ -40,13 +41,13 @@ const App = () => {
     }
     refresh();
     const fetchData = async () => {
-      const res = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getcart", { id });
+      const res = await axios.post(`${APP_DOMAIN}/api/products/getcart`, { id });
       const { cartdata, total } = res.data;
       disPatch(addCart({ cartdata, total }));
     }
     fetchData();
     const fetchOrder = async () => {
-      const resp = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getorder",{id});
+      const resp = await axios.post(`${APP_DOMAIN}/api/products/getorder`,{id});
       const { orderdata, paymentStatus, total } = resp.data;
       disPatch(setOrder({ orderdata, paymentStatus, total }));
     }

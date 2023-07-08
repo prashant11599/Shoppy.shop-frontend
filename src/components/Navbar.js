@@ -58,7 +58,7 @@ const Navbar = () => {
     const handleprofile = async () => {
         await axiosPrivate.get('/info', { withCredentials: true }).then((res) => {
             disPatch(setUser(res.data));
-            console.log(res);
+            // console.log(res);
         }).catch((error) => {
             console.log(error);
         });

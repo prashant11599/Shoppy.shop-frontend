@@ -1,4 +1,5 @@
 import React from 'react'
+import { APP_DOMAIN } from './interceptors/axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOrder } from '../store/orderSlice';
 import { addCart } from '../store/cartSlice';
@@ -29,7 +30,7 @@ const MyCart = () => {
                     'Your item is removed from cart',
                     'success'
                 )
-                const res = await axios.post("https://shoppy-shop-api.onrender.com/api/products/removecart", { productId, id });
+                const res = await axios.post(`${APP_DOMAIN}/api/products/removecart`, { productId, id });
                 const { cartdata, total } = res.data;
                 dispatch(addCart({ cartdata, total }));
             }
@@ -49,9 +50,9 @@ const MyCart = () => {
     }
     const checkoutHandler = async (product) => {
         const { price } = product;
-        const { data: { key } } = await axios.get("https://shoppy-shop-api.onrender.com/api/getkey")
+        const { data: { key } } = await axios.get(`${APP_DOMAIN}/api/getkey`)
         // console.log(key);
-        const { data: { order } } = await axios.post("https://shoppy-shop-api.onrender.com/api/checkout", {
+        const { data: { order } } = await axios.post(`${APP_DOMAIN}/api/checkout`, {
             price
         })
         // console.log(order);
@@ -69,7 +70,7 @@ const MyCart = () => {
                 // alert(response.razorpay_order_id);
                 // alert(response.razorpay_signature)
                 const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = response;
-                const res = await axios.post("https://shoppy-shop-api.onrender.com/api/paymentverification", {
+                const res = await axios.post(`${APP_DOMAIN}/api/paymentverification`, {
                     razorpay_order_id, razorpay_payment_id, razorpay_signature, product, id
                 })
                 // alert(res.data.message);
@@ -78,7 +79,7 @@ const MyCart = () => {
                     res.data.message,
                     'success'
                 )
-                const resp = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getorder", { id });
+                const resp = await axios.post(`${APP_DOMAIN}/api/products/getorder`, { id });
                 const { orderdata, paymentStatus, total } = resp.data;
                 dispatch(setOrder({ orderdata, paymentStatus, total }));
                 navigate('/profile');

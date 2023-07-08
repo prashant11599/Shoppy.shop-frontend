@@ -1,5 +1,6 @@
 import React from 'react'
 // import { useState } from 'react';
+import { APP_DOMAIN } from './interceptors/axios';
 import "./Home.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -19,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const limit = 15;
-      const res = await axios.get("https://shoppy-shop-api.onrender.com/api/products/all", {
+      const res = await axios.get(`${APP_DOMAIN}/api/products/all`, {
         params: {
           page: 1,
           limit: limit
@@ -41,7 +42,7 @@ const Home = () => {
   };
   const handleAdd = async (product) => {
     // alert('item added to cart');
-    await axios.post("https://shoppy-shop-api.onrender.com/api/products/addtocart", {
+    await axios.post(`${APP_DOMAIN}/api/products/addtocart`, {
       product, id
     }).then((res) => {
       Swal.fire(
@@ -56,7 +57,7 @@ const Home = () => {
         'info'
       )
     });
-    const res = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getcart", { id });
+    const res = await axios.post(`${APP_DOMAIN}/api/products/getcart`, { id });
     const { cartdata, total } = res.data;
     dispatch(addCart({ cartdata, total }));
   };
@@ -71,9 +72,9 @@ const Home = () => {
   }
   const checkoutHandler = async (product) => {
     const { price } = product;
-    const { data: { key } } = await axios.get("https://shoppy-shop-api.onrender.com/api/getkey")
+    const { data: { key } } = await axios.get(`${APP_DOMAIN}/api/getkey`)
     // console.log(key);
-    const { data: { order } } = await axios.post("https://shoppy-shop-api.onrender.com/api/checkout", {
+    const { data: { order } } = await axios.post(`${APP_DOMAIN}/api/checkout`, {
       price
     })
     // console.log(order);
@@ -91,7 +92,7 @@ const Home = () => {
         // alert(response.razorpay_order_id);
         // alert(response.razorpay_signature)
         const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = response;
-        const res = await axios.post("https://shoppy-shop-api.onrender.com/api/paymentverification", {
+        const res = await axios.post(`${APP_DOMAIN}/api/paymentverification`, {
           razorpay_order_id, razorpay_payment_id, razorpay_signature, product, id
         })
         // alert(res.data.message);
@@ -100,7 +101,7 @@ const Home = () => {
           res.data.message,
           'success'
         )
-        const resp = await axios.post("https://shoppy-shop-api.onrender.com/api/products/getorder", { id });
+        const resp = await axios.post(`${APP_DOMAIN}/api/products/getorder`, { id });
         const { orderdata, paymentStatus, total } = resp.data;
         dispatch(setOrder({ orderdata, paymentStatus, total }));
         navigate('/profile');
@@ -119,7 +120,6 @@ const Home = () => {
     };
     const razor = new window.Razorpay(options);
     razor.open();
-
   }
   return (
     <>
