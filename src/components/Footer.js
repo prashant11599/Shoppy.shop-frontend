@@ -13,9 +13,8 @@ const Footer = () => {
           {/* <img src="finalfooter1.png" alt="IMG" className='logo' /> */}
           <p>Making shop Easier With us for better experience <br />
             ectus eos nihil cumque sum dolor sit amet consectetur,<br />
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus <br />
+            Lorem ipsum dolor sit amet  elit. Repellendus <br />
             ectus eos nihil cumque sum dolor sit amet consectetur,<br />
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus <br />
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus <br />
           </p>
         </div>
@@ -57,5 +56,4 @@ const Footer = () => {
     </>
   )
 }
-
 export default Footer

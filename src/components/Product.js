@@ -185,8 +185,8 @@ const Product = () => {
                     nextLabel="next->"
                     breakLabel="..."
                     pageCount={pageCount}
-                    marginPagesDisplayed={5}
-                    pageRangeDisplayed={5}
+                    marginPagesDisplayed={3}
+                    pageRangeDisplayed={2}
                     onPageChange={handlePageClick}
                     containerClassName="pagination"
                     pageLinkClassName="page-num"

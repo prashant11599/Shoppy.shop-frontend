@@ -25,9 +25,7 @@
     font-weight: 500;
 }
 .main-container{
-    margin: 0px;
-    padding: 0px;
-    /* border: 5px solid rgb(40, 247, 182); */
+    /* border: 5px solid rgb(224, 164, 15); */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -38,11 +36,13 @@
     margin: 15px;
     padding: 15px;
     /* border: 5px solid rgb(247, 40, 199); */
+    width: 30%;
     /* flex-basis: 30%; */
 }
 .ordered-products{
     /* border: 5px solid rgb(94, 13, 152); */
     /* flex-basis: 65%; */
+    width: 65%;
     margin: 10px;
 }
 .order-count{
@@ -116,8 +116,8 @@
 
 .card .card-body {
     padding: 10px 40px;
-    /* border: 5px solid rgb(216, 105, 14); */
-}
+    /* border: 5px solid rgb(172, 216, 14); */
+}  
 
 .card .card-body .name {
     /* border: 5px solid rgb(94, 13, 152); */
@@ -177,39 +177,163 @@
 
 
 .card .social-links .social-icon:hover {
-    background-color:green;
+    background-color:black;
     height: 50px;
     width: 50px;
     text-decoration: none;
 }
 
 
-@media (max-width: 768px) {
+
+@media(max-width: 968px){
+    .main-container{
+        padding: 10px;
+        width: 100%;
+    }
+    .main-profile{
+        padding: 2px;
+        width: auto;
+        margin: 5px;
+    }
+    .ordered-products{
+        width: 100%;
+        margin: 5px;
+    }
     .card {
-        width:100%;
-        margin-top:130px;
-        margin-right: 50px;
-        padding: 5px;
+        width: 60%;
+        margin-top:15px;
+        margin-right:10px;
     }
-    .social-links{
-        gap:5px;
-        margin:10px;
-        padding-top:10px;
-        font-size: 12px;
-    }
-    .icon{
+    .card .social-links{
         margin: 0px;
-        padding: 0px;
-    }
-    .social-icon{
+        gap:0px;
         margin: 0px;
+        padding-top:0px;
+    }
+    .sidebar-links{
         padding: 0px;
+        margin: 0px;
     }
     .card .social-links .social-icon{
-        font-size: 12px;
-        margin: 5px;
-        padding: 5px;
+        margin: 0px;
+        padding: 0px;
     }
-
-
+    .status{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(max-width: 868px){
+    .main-container{
+        padding: 10px;
+        width: 100%;
+    }
+    .main-profile{
+        padding: 2px;
+        width: auto;
+        margin: 5px;
+    }
+    .ordered-products{
+        width: 100%;
+        margin: 5px;
+    }
+    .card {
+        width: 80%;
+        margin-top:15px;
+        margin-right:10px;
+    }
+    .card .social-links{
+        margin: 0px;
+        gap:0px;
+        margin: 0px;
+        padding-top:0px;
+    }
+    .sidebar-links{
+        padding: 0px;
+        margin: 0px;
+    }
+    .card .social-links .social-icon{
+        margin: 0px;
+        padding: 0px;
+    }
+    .status{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(max-width: 668px){
+    .main-container{
+        padding: 10px;
+        width: 100%;
+    }
+    .main-profile{
+        padding: 2px;
+        width: auto;
+        margin: 5px;
+    }
+    .ordered-products{
+        width: 100%;
+        margin: 5px;
+    }
+    .card {
+        width: 90%;
+        margin-top:15px;
+        margin-right:10px;
+    }
+    .card .social-links{
+        margin: 0px;
+        gap:0px;
+        margin: 0px;
+        padding-top:0px;
+    }
+    .sidebar-links{
+        padding: 0px;
+        margin: 0px;
+    }
+    .card .social-links .social-icon{
+        margin: 0px;
+        padding: 0px;
+    }
+    .status{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(max-width: 568px){
+    .main-container{
+        padding: 10px;
+        width: 100%;
+    }
+    .main-profile{
+        padding: 2px;
+        width: auto;
+        margin: 5px;
+    }
+    .ordered-products{
+        width: 100%;
+        margin: 5px;
+    }
+    .card {
+        width: 100%;
+        margin-top:15px;
+        margin-right:10px;
+    }
+    .card .social-links{
+        margin: 0px;
+        gap:0px;
+        margin: 0px;
+        padding-top:0px;
+    }
+    .sidebar-links{
+        padding: 0px;
+        margin: 0px;
+    }
+    .card .social-links .social-icon{
+        margin: 0px;
+        padding: 0px;
+    }
+    .status{
+        flex-direction: column;
+        align-items: center;
+    }
 }

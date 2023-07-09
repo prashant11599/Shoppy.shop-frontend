@@ -1,12 +1,12 @@
 .cartWrapper{
-    /* border: 5px solid red; */
+    /* border: 5px solid rgb(149, 255, 0); */
     padding:30px;
     display: grid;
     grid-template-columns: 100%;
-    gap: 50px;
+    gap: 20px;
 }
 .cartCard{
-    /* border: 5px solid red; */
+    /* border: 5px solid rgb(68, 0, 255); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,18 +16,21 @@
     padding:50px;
     text-align: center;
     background-color: whitesmoke;
+    /* background-color: #edf0f6; */
     box-shadow: 10px 10px 8px #e9e5ef;
 }
 .cartCard .product-image{
-    /* border: 5px solid red; */
+    /* border: 5px solid rgb(77, 255, 0); */
     padding: 10px;
-    flex-basis: 30%;
+    width:30%;
+    /* flex-basis: 30%; */
     box-shadow: 10px 10px 8px #cfcbd5;
 }
 .cartCard .product-detail{
-    /* border: 5px solid red; */
+    /* border: 5px solid rgb(255, 128, 0); */
     padding: 10px;
-    flex-basis: 60%;
+    width: 60%;
+    /* flex-basis: 60%; */
     font-weight:bold;
 }
 .description{
@@ -58,5 +61,79 @@
     display: flex;
     justify-content:space-around;
     align-items: center;
-   margin: 15px;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 968px){
+    .cartWrapper{
+        padding: 20px;
+    }
+    .cartCard{
+        padding:10px;
+        flex-direction: column;
+    }
+    .cartCard .product-image{
+        width:70%;
+    }
+    .cartCard .product-detail{
+        width:70%;
+    }
+    .cartbtnWrapper{
+        flex-direction: column;
+    }
+}
+@media(max-width: 868px){
+    .cartWrapper{
+        padding: 15px;
+    }
+    .cartCard{
+        padding:10px;
+        flex-direction: column;
+    }
+    .cartCard .product-image{
+        width: 80%;
+    }
+    .cartCard .product-detail{
+        width:80%;
+    }
+    .cartbtnWrapper{
+        flex-direction: column;
+    }
+}
+@media(max-width: 668px){
+    .cartWrapper{
+        padding: 10px;
+    }
+    .cartCard{
+        padding:10px;
+        flex-direction: column;
+    }
+    .cartCard .product-image{
+        width: 90%;
+    }
+    .cartCard .product-detail{
+        width:90%;
+    }
+    .cartbtnWrapper{
+        flex-direction: column;
+    }
+}
+@media(max-width: 568px){
+    .cartWrapper{
+        padding: 5px;
+    }
+    .cartCard{
+        padding:10px;
+        flex-direction: column;
+    }
+    .cartCard .product-image{
+        width: 100%;
+    }
+    .cartCard .product-detail{
+        width:100%;
+    }
+    .cartbtnWrapper{
+        flex-direction: column;
+    }
 }

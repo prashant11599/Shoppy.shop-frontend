@@ -100,6 +100,7 @@ const MyCart = () => {
         razor.open();
 
     }
+    
     return (
         <div>
             <div className="cartWrapper">

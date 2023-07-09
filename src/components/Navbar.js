@@ -63,9 +63,10 @@ const Navbar = () => {
             console.log(error);
         });
     }
+    
     return (
         <>
-            <div>
+            <div className='nav-container'>
                 <nav className='navbar'>
                     {/* <h3 className='logo'>Shoppy.shop</h3> */}
                     <img src="websitelogo.png" alt="IMG" className='logo' />

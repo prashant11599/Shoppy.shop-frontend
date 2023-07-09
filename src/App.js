@@ -20,6 +20,7 @@ import useAxiosPrivateInstance from './components/interceptors/useAxiosPrivate';
 import { setUser } from './store/authSlice';
 import ResetPassword from './components/ResetPassword';
 import VerifyOtp from './components/VerifyOtp';
+import "./App.css"
 const App = () => {
   // code for persistent login after refresh
   const disPatch = useDispatch();

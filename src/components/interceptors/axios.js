@@ -1,6 +1,7 @@
 import axios from "axios";
 // axios.defaults.baseURL = 'http://localhost:8000/api/user';
 // const BASE_URL='http://localhost:5000/api/user';
+// https://shoppy-shop-api.onrender.com
 export const APP_DOMAIN='https://shoppy-shop-api.onrender.com';
 const BASE_URL=`${APP_DOMAIN}/api/user`;
 // const BASE_URL1="http://localhost:5000/api/products"

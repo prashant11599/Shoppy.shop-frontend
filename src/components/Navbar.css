@@ -6,12 +6,15 @@ a {
 li {
     list-style-type: none;
 }
-
+.nav-container{
+    width: 100%;
+}
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 10vh;
+    width: 100%;
     box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
     /*box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;*/
 }
@@ -25,6 +28,7 @@ li {
     justify-content: flex-end;
     align-items: center;
     width: 75%;
+    gap: 0px;
     /* border: 2px solid green; */
     overflow: hidden;
 }
@@ -84,6 +88,12 @@ button {
 }
 
 @media (max-width: 768px) {
+    .nav-container{
+        width: 100%;
+    }
+    .navbar{
+        width:100%;
+    }
     .logo {
         /* display: flex;
         position: absolute; */
@@ -106,6 +116,7 @@ button {
         transition: all 0.5s ease-in-out;
         width: 100%;
         background-color: white;
+        z-index: 1000;
     }
 
     ul li {
